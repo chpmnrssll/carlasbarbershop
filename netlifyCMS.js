@@ -9,7 +9,7 @@ CMS.init({
   config: {
     backend: {
       name: 'git-gateway',
-      repo: 'chpmnrssll/gridsome-boilerplate',
+      repo: 'chpmnrssll/carlasbarbershop',
       squash_merges: true,
     },
     load_config_file: false,

@@ -13,7 +13,7 @@ $theme-colors: (
   gray: #6c757d,
   gray-dark: #343a40,
 
-  primary: #207fdc,
+  primary: #dd3333,
   secondary: #47c93d,
   success: #28a745,
   info: #17a2b8,
@@ -30,3 +30,6 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1300px
 );
+
+$font-family-base: 'Open Sans', sans-serif;
+// $link-color: map-get($theme-colors, "light");

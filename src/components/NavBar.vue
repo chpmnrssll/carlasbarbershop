@@ -6,9 +6,9 @@
     toggleable="md"
   >
     <div class="container-fluid">
-      <b-navbar-brand class="mx-4">
+      <b-navbar-brand class="mx-0">
         <g-link to="/agency">
-          <g-image alt="logo" immediate src="../../assets/images/logo.png" width="40" />
+          <g-image alt="logo" immediate src="~/assets/images/logo-regular.png" />
         </g-link>
       </b-navbar-brand>
 
@@ -19,25 +19,19 @@
       <b-collapse is-nav id="nav_collapse" v-model="showCollapse">
         <b-navbar-nav class="ml-auto px-4">
           <b-nav-item>
-            <g-link class="" to="/agency">Home</g-link>
+            <g-link class="px-2" to="/agency">Home</g-link>
           </b-nav-item>
           <b-nav-item>
-            <g-link class="" to="/agency/practice">Our Practice</g-link>
+            <g-link class="px-2" to="/agency/about">About</g-link>
           </b-nav-item>
           <b-nav-item>
-            <g-link class="" to="/agency/reviews">Reviews</g-link>
+            <g-link class="px-2" to="/agency/barbers">Barbers</g-link>
           </b-nav-item>
           <b-nav-item>
-            <g-link class="" to="/agency/appointments">Appointments</g-link>
+            <g-link class="px-2" to="/agency/gallery">Gallery</g-link>
           </b-nav-item>
           <b-nav-item>
-            <g-link class="" to="/agency/directions">Directions & Map</g-link>
-          </b-nav-item>
-          <b-nav-item>
-            <g-link class="" to="/agency/provider">Preferred Provider</g-link>
-          </b-nav-item>
-          <b-nav-item>
-            <g-link class="" to="/agency/forms">Forms</g-link>
+            <g-link class="px-2" to="/agency/contact">Contact</g-link>
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
@@ -106,31 +100,22 @@ export default {
         .getElementById('app')
         .querySelectorAll('section')
         .forEach(el => {
-          el.style.filter = val ? 'blur(8px)' : '';
+          el.style.filter = val ? 'blur(12px)' : '';
         });
-    },
-    triggerNetlifyIdentityAction(action) {
-      if (action === 'login' || action === 'signup') {
-        // this.$root.$options.netlifyIdentity.open(action);
-        window.netlifyIdentity.open(action);
-      } else if (action === 'logout') {
-        // this.$root.$options.netlifyIdentity.logout();
-        window.netlifyIdentity.logout();
-        this.updateUser(null);
-        // this.$router.push('/');
-      }
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.container-fluid {
+  max-width: 1240px;
+}
 .hidden-navbar {
   transform: translate3d(0, -100%, 0);
 }
 
 nav {
-  background-color: white;
   transform: translate3d(0, 0, 0);
   transition: 0.1s transform linear;
 
@@ -139,20 +124,19 @@ nav {
   }
   .nav-link {
     a {
-      color: var(--dark);
+      color: var(--light);
+      font-family: 'Montserrat', sans-serif;
       font-size: 100%;
       text-decoration: none;
       &:hover {
         color: var(--primary);
       }
+      @media (max-width: 640px) {
+        color: var(--light);
+        text-shadow: 1px 2px 4px #00000088;
+        font-size: 2rem;
+      }
     }
-    // @extend .hamburger-menu;
-    // @media (max-width: 640px) {
-    //   font-size: 2rem;
-    // }
-  }
-  .container-fluid {
-    max-width: 1240px;
   }
 
   #nav_collapse {
@@ -160,6 +144,7 @@ nav {
     height: 100vh;
     transition: height 0.25s ease-out;
 
+    // disable gradient > 640px
     @media (min-width: 640px) {
       background-image: none;
       height: auto;

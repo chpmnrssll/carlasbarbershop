@@ -6,12 +6,6 @@ import user from './src/store/modules/user';
 // import store from './src/store';
 
 export default function(Vue, options, context) {
-  // FIXME: hack to add route meta data
-  ['protected'].forEach(routeName => {
-    const protectedRoute = context.router.options.routes.find(route => route.name === routeName);
-    protectedRoute.meta.requiresAuth = true;
-  });
-
   Vue.use(Vuex);
   const store = new Vuex.Store({
     strict: true,
