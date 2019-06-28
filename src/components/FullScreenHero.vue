@@ -36,8 +36,8 @@ export default {
   mounted() {
     if (this.fixed) {
       const bgImg = this.$el.querySelectorAll('.g-image')[0];
-      console.log(bgImg.src);
       bgImg.classList.add('d-none');
+
       const fixedImg = document.createElement('img');
       fixedImg.style.width = '100%';
       fixedImg.style.height = '100vh';
@@ -46,7 +46,6 @@ export default {
       fixedImg.style.backgroundPosition = 'center';
       fixedImg.style.backgroundSize = 'cover';
       bgImg.parentElement.append(fixedImg);
-      console.log(fixedImg);
     }
   },
 };

@@ -13,7 +13,11 @@
       </b-navbar-brand>
 
       <b-navbar-toggle class="mx-4" target="nav_collapse">
-        <span class="hamburger-menu">=</span>
+        <button class="hamburger hamburger--collapse" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner" />
+          </span>
+        </button>
       </b-navbar-toggle>
 
       <b-collapse is-nav id="nav_collapse" v-model="showCollapse">
@@ -119,8 +123,12 @@ nav {
   transform: translate3d(0, 0, 0);
   transition: 0.1s transform linear;
 
-  .hamburger-menu {
-    // text-shadow: 0px 1px 2px #aaaaaa88, 1px 2px 3px #00000088;
+  .hamburger {
+    .hamburger-inner,
+    .hamburger-inner:after,
+    .hamburger-inner:before {
+      background-color: var(--light);
+    }
   }
   .nav-link {
     a {
