@@ -1,6 +1,6 @@
 <template>
   <DefaultLayout>
-    <FullScreenHero>
+    <FullScreenHero fixed>
       <template v-slot:background>
         <g-image src="~/assets/images/bg-img-03.jpg" alt="" immediate />
       </template>
@@ -20,7 +20,7 @@
 
     <FullScreenHero>
       <template v-slot:background>
-        <g-image src="~/assets/images/bg-img-02.jpg" alt="" immediate />
+        <g-image src="~/assets/images/bg-img-02.jpg" alt="" />
       </template>
       <template v-slot:body>
         <div class="container-fluid">
@@ -55,7 +55,7 @@
       </template>
     </FullScreenHero>
 
-    <FullScreenHero>
+    <FullScreenHero fixed>
       <template v-slot:background>
         <g-image src="~/assets/images/bg-img-01.jpg" alt="" immediate />
       </template>
@@ -128,7 +128,7 @@
 
     <FullScreenHero>
       <template v-slot:background>
-        <g-image src="~/assets/images/bg-img-05.jpg" alt="" immediate />
+        <g-image src="~/assets/images/bg-img-05.jpg" alt="" />
       </template>
       <template v-slot:body>
         <div class="container-fluid">
@@ -169,7 +169,7 @@
       </template>
     </FullScreenHero>
 
-    <FullScreenHero>
+    <FullScreenHero fixed>
       <template v-slot:background>
         <g-image src="~/assets/images/bg-img-04.jpg" alt="" immediate />
       </template>
