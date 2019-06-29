@@ -7,7 +7,7 @@
   >
     <div class="container-fluid">
       <b-navbar-brand class="mx-0">
-        <g-link to="/agency">
+        <g-link to="/">
           <g-image alt="logo" immediate src="~/assets/images/logo-regular.png" />
         </g-link>
       </b-navbar-brand>
@@ -23,19 +23,19 @@
       <b-collapse is-nav id="nav_collapse" v-model="showCollapse">
         <b-navbar-nav class="ml-auto px-4">
           <b-nav-item>
-            <g-link class="px-2" to="/agency">Home</g-link>
+            <g-link class="px-2" to="/">Home</g-link>
           </b-nav-item>
           <b-nav-item>
-            <g-link class="px-2" to="/agency/about">About</g-link>
+            <g-link class="px-2" to="/about">About</g-link>
           </b-nav-item>
           <b-nav-item>
-            <g-link class="px-2" to="/agency/barbers">Barbers</g-link>
+            <g-link class="px-2" to="/barbers">Barbers</g-link>
           </b-nav-item>
           <b-nav-item>
-            <g-link class="px-2" to="/agency/gallery">Gallery</g-link>
+            <g-link class="px-2" to="/gallery">Gallery</g-link>
           </b-nav-item>
           <b-nav-item>
-            <g-link class="px-2" to="/agency/contact">Contact</g-link>
+            <g-link class="px-2" to="/contact">Contact</g-link>
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
