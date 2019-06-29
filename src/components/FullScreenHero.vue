@@ -1,18 +1,18 @@
 <template>
   <section>
-    <b-jumbotron
+    <b-container
       class="d-flex flex-column justify-content-center mb-0 p-0"
       :class="overlay ? 'gradient-overlay' : ''"
       container-fluid
-      text-variant="light"
+      fluid
     >
       <div :class="overlay ? 'img-under' : ''">
         <slot name="background" />
       </div>
-      <SequentialEntrance animation="entranceFromTop" :delay="50" :className="classN">
+      <SequentialEntrance animation="entranceFromTop" :delay="50" :className="fixedClass">
         <slot name="body" />
       </SequentialEntrance>
-    </b-jumbotron>
+    </b-container>
   </section>
 </template>
 
@@ -29,8 +29,8 @@ export default {
     overlay: { type: Boolean, default: false },
   },
   computed: {
-    classN() {
-      return this.fixed ? `${this.className} position-absolute` : this.className;
+    fixedClass() {
+      return this.fixed ? `position-absolute ${this.className}` : this.className;
     },
   },
   mounted() {
@@ -53,7 +53,7 @@ export default {
 
 <style lang="scss" scoped>
 section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 .g-image {
@@ -68,7 +68,7 @@ section {
 .img-under {
   z-index: -1;
 }
-.jumbotron {
+.container-fluid {
   background-color: transparent;
   background-image: linear-gradient(225deg, var(--primaryBlue) 0%, var(--primaryGreen) 65%);
   border-radius: 0 !important;

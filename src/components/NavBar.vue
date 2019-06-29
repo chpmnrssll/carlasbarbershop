@@ -1,9 +1,9 @@
 <template>
   <b-navbar
     class="px-0"
-    :class="{ 'hidden-navbar': !showNavbar && !showCollapse }"
+    :class="{ 'hide-navbar': !showNavbar && !showCollapse }"
     fixed="top"
-    toggleable="md"
+    toggleable="lg"
   >
     <div class="container-fluid">
       <b-navbar-brand class="mx-0">
@@ -115,7 +115,7 @@ export default {
 .container-fluid {
   max-width: 1240px;
 }
-.hidden-navbar {
+.hide-navbar {
   transform: translate3d(0, -100%, 0);
 }
 
