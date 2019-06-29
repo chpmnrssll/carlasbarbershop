@@ -39,6 +39,7 @@
     "eslint": "^5.16.0",
     "eslint-config-airbnb-vue": "^2.0.1",
     "eslint-plugin-gridsome": "^1.2.5",
-    "vue-eslint-parser": "^6.0.4"
+    "vue-eslint-parser": "^6.0.4",
+    "vue-svg-loader": "^0.12.0"
   }
 }
