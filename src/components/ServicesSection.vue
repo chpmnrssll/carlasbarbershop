@@ -63,7 +63,7 @@
             </b-media>
           </b-col>
         </b-row>
-        <b-button @click="" class="mt-4 py-3 px-5">
+        <b-button @click="" class="mt-4 py-3 px-5 custom-button">
           All Services
         </b-button>
       </b-container>
