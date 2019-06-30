@@ -8,7 +8,7 @@
       <div :class="overlay ? 'img-under' : ''">
         <slot name="background" />
       </div>
-      <SequentialEntrance animation="entranceFromTop" :delay="50" :className="fixedClass" id="body">
+      <SequentialEntrance animation="entranceFromTop" :delay="50" :className="fixedClass">
         <slot name="body" />
       </SequentialEntrance>
     </b-container>
@@ -29,15 +29,16 @@ export default {
   },
   computed: {
     fixedClass() {
-      return this.fixed ? `position-absolute p-0 ${this.className}` : this.className;
+      const addClass = 'position-absolute p-0 FullScreenHero-body';
+      return this.fixed ? `${this.className} ${addClass}` : this.className;
     },
   },
   mounted() {
     if (this.fixed) {
-      const body = this.$el.querySelector('#body');
+      // set this sections' height to match .FullScreenHero-body
+      const body = this.$el.querySelector('.FullScreenHero-body');
       const height = parseInt(window.getComputedStyle(body).height, 10);
       this.$el.style.height = `${height}px`;
-      // console.log(parseInt(window.getComputedStyle(body).height, 10));
 
       // hide the original g-image
       const bgImg = this.$el.querySelector('.g-image');
@@ -51,6 +52,7 @@ export default {
       fixedImg.style.backgroundImage = `url(${bgImg.src})`;
       fixedImg.style.backgroundPosition = 'center';
       fixedImg.style.backgroundSize = 'cover';
+      fixedImg.alt = bgImg.alt;
       bgImg.parentElement.append(fixedImg);
     }
   },

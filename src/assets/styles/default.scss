@@ -72,8 +72,14 @@ p {
   letter-spacing: 4px;
   line-height: 1.875rem;
   text-transform: uppercase;
+
+  &:active,
   &:hover {
-    background-color: transparent;
-    border-color: var(--primary);
+    background-color: transparent !important;
+    border-color: var(--primary) !important;
+  }
+  &:active:focus,
+  &:focus {
+    box-shadow: 0 0 0 0.2rem var(--primary) !important;
   }
 }

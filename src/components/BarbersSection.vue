@@ -13,17 +13,17 @@
             consectetur adipiscing deserum elit.
           </p>
           <b-col>
-            <g-image src="~/assets/images/barber-01.jpg" />
+            <g-image src="~/assets/images/barber-01.jpg" alt="Thomas" />
             <h4>Mustache Expert</h4>
             <p>Thomas is the founder and owner of the barbershop.</p>
           </b-col>
           <b-col>
-            <g-image src="~/assets/images/barber-02.jpg" />
+            <g-image src="~/assets/images/barber-02.jpg" alt="Edward" />
             <h4>Beard Trimmer</h4>
             <p>Edward has been in the barber industry for over 10 years.</p>
           </b-col>
           <b-col>
-            <g-image src="~/assets/images/barber-03.jpg" />
+            <g-image src="~/assets/images/barber-03.jpg" alt="Roy" />
             <h4>Hair Specialist</h4>
             <p>Roy it's very passionate, and he's been with us since 2010.</p>
           </b-col>

@@ -18,7 +18,12 @@
       </b-navbar-brand>
 
       <b-navbar-toggle class="mx-4" target="nav_collapse">
-        <button class="hamburger hamburger--collapse" type="button">
+        <button
+          class="hamburger hamburger--collapse"
+          type="button"
+          role="navigation"
+          aria-label="Hamburger Menu"
+        >
           <span class="hamburger-box">
             <span class="hamburger-inner" />
           </span>
@@ -132,6 +137,7 @@ export default {
 nav {
   transform: translate3d(0, 0, 0);
   transition: 0.1s transform linear;
+  // mix-blend-mode: exclusion;
 
   .hamburger {
     .hamburger-inner,
@@ -146,6 +152,7 @@ nav {
       font-family: 'Montserrat', sans-serif;
       font-size: 100%;
       text-decoration: none;
+
       &:hover {
         color: var(--primary);
       }
