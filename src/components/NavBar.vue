@@ -20,7 +20,7 @@
         </button>
       </b-navbar-toggle>
 
-      <b-collapse is-nav id="nav_collapse" v-model="showCollapse">
+      <b-collapse is-nav id="nav_collapse" v-model="showCollapse" class="nav-collapse">
         <b-navbar-nav class="ml-auto px-4">
           <b-nav-item>
             <g-link class="px-2" to="/">Home</g-link>
@@ -147,7 +147,7 @@ nav {
     }
   }
 
-  #nav_collapse {
+  .nav-collapse {
     background-image: linear-gradient(180deg, #00000000 0%, #000000cc 100%);
     height: 100vh;
     transition: height 0.25s ease-out;
@@ -155,7 +155,7 @@ nav {
     // disable gradient > 640px
     @media (min-width: 769px) {
       background-image: none;
-      display: none !important;
+      // display: none !important;
       height: auto;
       width: 100%;
     }
