@@ -34,7 +34,7 @@ body {
 }
 
 section {
-  transition: 0.25s filter ease-in-out;
+  transition: 0.5s filter ease-in-out;
   will-change: filter;
 }
 </style>

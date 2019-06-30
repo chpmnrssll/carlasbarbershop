@@ -6,7 +6,7 @@
     toggleable="lg"
   >
     <div class="container-fluid">
-      <b-navbar-brand class="mx-0">
+      <b-navbar-brand class="ml-3 ml-lg-0">
         <g-link to="/">
           <g-image alt="logo" immediate src="~/assets/images/logo-regular.png" />
         </g-link>
@@ -104,7 +104,7 @@ export default {
         .getElementById('app')
         .querySelectorAll('section')
         .forEach(el => {
-          el.style.filter = val ? 'blur(12px)' : '';
+          el.style.filter = val ? 'blur(16px)' : '';
         });
     },
   },
@@ -139,7 +139,7 @@ nav {
       &:hover {
         color: var(--primary);
       }
-      @media (max-width: 640px) {
+      @media (max-width: 768px) {
         color: var(--light);
         text-shadow: 1px 2px 4px #00000088;
         font-size: 2rem;
@@ -148,12 +148,12 @@ nav {
   }
 
   #nav_collapse {
-    background-image: linear-gradient(180deg, #00000000 0%, #00000088 100%);
+    background-image: linear-gradient(180deg, #00000000 0%, #000000cc 100%);
     height: 100vh;
     transition: height 0.25s ease-out;
 
     // disable gradient > 640px
-    @media (min-width: 640px) {
+    @media (min-width: 769px) {
       background-image: none;
       height: auto;
       width: 100%;

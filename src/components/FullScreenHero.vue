@@ -3,13 +3,12 @@
     <b-container
       class="d-flex flex-column justify-content-center mb-0 p-0"
       :class="overlay ? 'gradient-overlay' : ''"
-      container-fluid
       fluid
     >
       <div :class="overlay ? 'img-under' : ''">
         <slot name="background" />
       </div>
-      <SequentialEntrance animation="entranceFromTop" :delay="50" :className="fixedClass">
+      <SequentialEntrance animation="entranceFromTop" :delay="50" :className="fixedClass" id="body">
         <slot name="body" />
       </SequentialEntrance>
     </b-container>
@@ -30,17 +29,24 @@ export default {
   },
   computed: {
     fixedClass() {
-      return this.fixed ? `position-absolute ${this.className}` : this.className;
+      return this.fixed ? `position-absolute p-0 ${this.className}` : this.className;
     },
   },
   mounted() {
     if (this.fixed) {
-      const bgImg = this.$el.querySelectorAll('.g-image')[0];
+      const body = this.$el.querySelector('#body');
+      const height = parseInt(window.getComputedStyle(body).height, 10);
+      this.$el.style.height = `${height}px`;
+      // console.log(parseInt(window.getComputedStyle(body).height, 10));
+
+      // hide the original g-image
+      const bgImg = this.$el.querySelector('.g-image');
       bgImg.classList.add('d-none');
 
+      // build a new blank img with src as a css background-image
       const fixedImg = document.createElement('img');
       fixedImg.style.width = '100%';
-      fixedImg.style.height = '100vh';
+      fixedImg.style.height = `${height}px`;
       fixedImg.style.backgroundAttachment = 'fixed';
       fixedImg.style.backgroundImage = `url(${bgImg.src})`;
       fixedImg.style.backgroundPosition = 'center';

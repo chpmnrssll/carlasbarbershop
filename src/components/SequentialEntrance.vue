@@ -1,7 +1,7 @@
 <template>
-  <div :class="className">
+  <b-container fluid :class="className">
     <slot />
-  </div>
+  </b-container>
 </template>
 
 <script>
