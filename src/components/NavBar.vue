@@ -77,6 +77,7 @@ export default {
     },
   },
   mounted() {
+    console.log(this.$el.querySelectorAll('#nav_collapse'));
     this.lastScrollPosition = window.pageYOffset;
     window.addEventListener('scroll', this.onScroll, { passive: true });
   },
