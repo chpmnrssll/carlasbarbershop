@@ -77,7 +77,11 @@ export default {
     },
   },
   mounted() {
-    console.log(this.$el.querySelectorAll('#nav_collapse'));
+    const navCollapses = this.$el.querySelectorAll('#nav_collapse');
+    if (navCollapses.length > 1) {
+      navCollapses.pop();
+      console.log(navCollapses);
+    }
     this.lastScrollPosition = window.pageYOffset;
     window.addEventListener('scroll', this.onScroll, { passive: true });
   },
