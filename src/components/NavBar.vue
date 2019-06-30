@@ -155,7 +155,7 @@ nav {
     // disable gradient > 640px
     @media (min-width: 769px) {
       background-image: none;
-      display: none;
+      display: none !important;
       height: auto;
       width: 100%;
     }
