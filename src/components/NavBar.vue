@@ -8,7 +8,12 @@
     <div class="container-fluid">
       <b-navbar-brand class="ml-3 ml-lg-0">
         <g-link to="/">
-          <g-image alt="logo" immediate src="~/assets/images/logo-regular.png" />
+          <g-image
+            alt="logo"
+            immediate
+            src="~/assets/images/white_logo_transparent_background.png"
+            width="128"
+          />
         </g-link>
       </b-navbar-brand>
 
@@ -157,10 +162,9 @@ nav {
     height: 100vh;
     transition: height 0.25s ease-out;
 
-    // disable gradient > 640px
+    // disable gradient > 768px
     @media (min-width: 769px) {
       background-image: none;
-      // display: none !important;
       height: auto;
       width: 100%;
     }
