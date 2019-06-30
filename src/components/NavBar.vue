@@ -79,7 +79,7 @@ export default {
   mounted() {
     const navCollapses = this.$el.querySelectorAll('#nav_collapse');
     if (navCollapses.length > 1) {
-      navCollapses.pop();
+      navCollapses.remove();
       console.log(navCollapses);
     }
     this.lastScrollPosition = window.pageYOffset;
