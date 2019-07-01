@@ -4,9 +4,9 @@
       <g-image src="~/assets/images/bg-img-06.jpg" alt="" />
     </template>
     <template v-slot:body>
-      <div class="container-fluid">
+      <b-container fluid class="py-4">
         <b-row>
-          <b-col>
+          <b-col class="my-4">
             <h2 class="mb-4">Opening Hours</h2>
             <p>Monday – Friday……………………………….9am – 5pm</p>
             <p>Saturday………………………………………….11am – 3pm</p>
@@ -20,7 +20,7 @@
           </b-col>
         </b-row>
         <b-row>
-          <b-col>
+          <b-col class="my-4">
             <h2 class="mb-4">Keep In Touch</h2>
             <div class="">
               <g-link>FaceBook</g-link>
@@ -38,7 +38,7 @@
           <p>Copyright © 2019 Carlas Barber Shop | All rights reserved</p>
           <g-link class="nav--link" to="/admin">Netlify CMS</g-link>
         </div>
-      </div>
+      </b-container>
     </template>
   </FullScreenHero>
 </template>
