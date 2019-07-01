@@ -32,6 +32,7 @@
     "sass-loader": "^7.1.0",
     "slate-schema-violations": "^0.1.39",
     "vue": "^2.6.10",
+    "vue2-google-maps": "^0.10.6",
     "vuex": "^3.1.1",
     "webpack": "^4.31.0"
   },
