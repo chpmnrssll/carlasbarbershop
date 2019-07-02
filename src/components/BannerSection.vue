@@ -37,6 +37,8 @@
 </template>
 
 <script>
+/* eslint import/no-unresolved: "off" */
+
 import FullScreenHero from './FullScreenHero.vue';
 import QuoteRight from '~/assets/images/quote_right.svg';
 
@@ -50,7 +52,6 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  max-width: 1240px;
   padding-top: 15.625rem;
 }
 .quote_right {
@@ -58,9 +59,5 @@ export default {
   fill: currentColor;
   width: 64px;
   height: 64px;
-}
-hr {
-  border-top: 4px solid var(--light);
-  opacity: 0.75;
 }
 </style>

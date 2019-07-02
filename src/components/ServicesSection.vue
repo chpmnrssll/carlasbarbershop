@@ -4,11 +4,23 @@
       <g-image src="~/assets/images/bg-img-01.jpg" alt="" immediate />
     </template>
     <template v-slot:body>
-      <b-container fluid>
-        <h2>Services</h2>
-        <h3>Pride in each service</h3>
-        <b-row class="w-50">
-          <b-col>
+      <b-container>
+        <b-row class="py-4">
+          <b-col cols="6">
+            <h2>Services</h2>
+            <b-row>
+              <b-col cols="2">
+                <hr class="my-2" />
+              </b-col>
+              <b-col>
+                <h3>Pride in each service</h3>
+              </b-col>
+            </b-row>
+          </b-col>
+        </b-row>
+
+        <b-row class="py-4">
+          <b-col cols="6">
             <b-media>
               <g-image
                 slot="aside"
@@ -81,4 +93,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.container {
+  padding-top: 4rem;
+}
+</style>
