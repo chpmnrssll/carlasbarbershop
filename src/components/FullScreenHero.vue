@@ -31,24 +31,24 @@ export default {
   computed: {
     fixedClass() {
       const addClass = 'position-absolute p-0 FullScreenHero-body';
-      return this.fixed ? `${this.className} ${addClass}` : this.className;
+      return this.fixed ? `${this.className} ${addClass}` : `${this.className} FullScreenHero-body`;
     },
   },
   mounted() {
     const sectionHeight = parseFloat(this.sectionHeight, 10);
-    if (sectionHeight) {
-      this.$el.style.height = this.sectionHeight;
-    }
-    if (this.fixed) {
-      // set this sections' height to match .FullScreenHero-body
-      const body = this.$el.querySelector('.FullScreenHero-body');
-      const height = parseInt(window.getComputedStyle(body).height, 10);
-      if (sectionHeight && sectionHeight > height) {
-        this.$el.style.height = this.sectionHeight;
-      } else {
-        this.$el.style.height = `${height}px`;
-      }
 
+    // set this sections' height to match .FullScreenHero-body
+    const body = this.$el.querySelector('.FullScreenHero-body div');
+    const height = parseInt(window.getComputedStyle(body).height, 10);
+    if (sectionHeight && sectionHeight > height) {
+      this.$el.style.height = this.sectionHeight;
+      body.parentElement.parentElement.style.height = this.sectionHeight;
+    } else {
+      this.$el.style.height = `${height}px`;
+      body.parentElement.parentElement.style.height = `${height}px`;
+    }
+
+    if (this.fixed) {
       // hide the original g-image
       const bgImg = this.$el.querySelector('.g-image');
       bgImg.classList.add('d-none');
@@ -61,6 +61,7 @@ export default {
       fixedImg.style.backgroundImage = `url(${bgImg.src})`;
       fixedImg.style.backgroundPosition = 'center';
       fixedImg.style.backgroundSize = 'cover';
+      fixedImg.style.transform = 'scale(1.01)';
       fixedImg.alt = bgImg.alt;
       bgImg.parentElement.append(fixedImg);
     }
