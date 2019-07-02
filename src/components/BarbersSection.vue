@@ -60,4 +60,9 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.container {
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
+</style>

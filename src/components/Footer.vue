@@ -99,9 +99,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.copyright {
-  height: 100%;
-}
 section {
   background-color: #000000;
 }

@@ -71,6 +71,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
 .price-list-row {
   border-bottom: 2px solid var(--light);
 }
