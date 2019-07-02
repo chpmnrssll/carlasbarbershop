@@ -1,5 +1,5 @@
 import BootstrapVue from 'bootstrap-vue';
-import * as VueGoogleMaps from 'vue2-google-maps';
+// import * as VueGoogleMaps from 'vue2-google-maps';
 import DefaultLayout from './layouts/Default.vue';
 import checkIfMobile from './util/checkIfMobile';
 
@@ -20,12 +20,12 @@ export default function(Vue, { head }) {
     });
   });
 
-  Vue.use(VueGoogleMaps, {
-    load: {
-      key: process.env.GRIDSOME_GOOGLE_MAPS_API_KEY,
-      libraries: 'places', // This is required if you use the Autocomplete plugin
-    },
-  });
+  // Vue.use(VueGoogleMaps, {
+  //   load: {
+  //     key: process.env.GRIDSOME_GOOGLE_MAPS_API_KEY,
+  //     libraries: 'places', // This is required if you use the Autocomplete plugin
+  //   },
+  // });
   Vue.use(BootstrapVue);
   Vue.component('DefaultLayout', DefaultLayout);
   Vue.mixin(checkIfMobile);
