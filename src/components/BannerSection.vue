@@ -52,7 +52,8 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  padding-top: 15.625rem;
+  padding-bottom: 7rem;
+  padding-top: 14rem;
 }
 .quote_right {
   color: var(--light);
